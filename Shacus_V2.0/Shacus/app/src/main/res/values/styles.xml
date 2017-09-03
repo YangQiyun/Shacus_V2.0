@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. parent="Theme.AppCompat.Light.NoActionBar"-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!-- toolbar（actionbar）颜色 -->
+        <item name="colorPrimary">@color/gray_8f</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">@color/gray_cc</item>
+        <!--toolbar文字的颜色-->
+        <item name="@android:textColorPrimary">@color/black</item>
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@color/white</item>
+        <!--toolbar上菜单文字的颜色-->
+        <item name="actionMenuTextColor">@color/pink</item>
+        <item name="colorAccent">@color/brown</item>
+    </style>
+
+    <!--4,4 以上沉浸式使用-->
+    <style name="activity_chenjinshi">
+        <item name="android:clipToPadding">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
