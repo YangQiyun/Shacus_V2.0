@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -26,7 +27,6 @@ import shacus.edu.seu.com.shacus.Network.StatusCode;
 import shacus.edu.seu.com.shacus.Network.okHttpUtil;
 import shacus.edu.seu.com.shacus.Network.okHttpUtil_JsonResponse;
 import shacus.edu.seu.com.shacus.Utils.CommonUrl;
-import shacus.edu.seu.com.shacus.Utils.WeakRefHander;
 
 /**
  * Created by ljh on 2017/9/11.
@@ -37,9 +37,9 @@ public class EditInfoManager implements StatusCode,okHttpUtil_JsonResponse {
     private Context context;
     private LoginDataModel loginData;
     private UserModel userModel;
-    private WeakRefHander mHandler;
+    private Handler mHandler;
     private EditInfoActivity e;
-    public EditInfoManager(Context temp, WeakRefHander handler ){
+    public EditInfoManager(Context temp, Handler handler ){
         context=temp;
         mHandler=handler;
         cache=ACache.get(context);
