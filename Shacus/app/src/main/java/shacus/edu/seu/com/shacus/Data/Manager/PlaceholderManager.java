@@ -137,7 +137,7 @@ public class PlaceholderManager implements StatusCode,okHttpUtil_JsonResponse {
             case WANT_TO_YUEPAI_SUCCESS:
             case REQUEST_YUEPAI_GRAPH_LIST_SUCCESS:
             case REQUEST_YUEPAI_MODEL_LIST_SUCCESS://第一次加载/刷新的返回
-
+                yuepaiList.clear();
                 JSONArray array = jsonObject.getJSONArray("contents");
                 for (int i = 0; i < array.length(); i++){
                     JSONObject info = array.getJSONObject(i);

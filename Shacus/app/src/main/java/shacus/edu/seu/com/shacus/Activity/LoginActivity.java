@@ -220,6 +220,9 @@ public class LoginActivity extends AppCompatActivity implements okHttpUtil_JsonR
                         }
                         return;
                     }else {
+                        if(password!=null&&password.length()<6)
+                            CommonUtils.getUtilInstance().showToast(LoginActivity.this,"密码至少为六位");
+                        else
                         CommonUtils.getUtilInstance().showToast(LoginActivity.this,"请完善信息");
                         return;
                     }
@@ -235,11 +238,12 @@ public class LoginActivity extends AppCompatActivity implements okHttpUtil_JsonR
                     view1.setVisibility(View.GONE);
                     view2.setVisibility(View.VISIBLE);
                     String usrnm=username.getText().toString();
-                    if (!usrnm.equals("")&&eventFlag==3)
+                    if (!usrnm.equals("")&&eventFlag==3&&usrnm.length()==11)
                     {
                         map.put("phone",usrnm);
                         map.put("type",String.valueOf(StatusCode.REQUEST_REGISTER_VERIFYA));
                         okHttpUtil.instance.post(LoginActivity.this,CommonUrl.registerAccount,map,LoginActivity.this );
+                        Log.d("login", "onClick: "+okHttpUtil.instance.pinjieurl(CommonUrl.registerAccount,map));
                         loginProgressDlg.show();
                         timeCount.start();
                     }else if(!usrnm.equals("")&&eventFlag==2){
@@ -250,7 +254,10 @@ public class LoginActivity extends AppCompatActivity implements okHttpUtil_JsonR
                         timeCount.start();
                     }
                     else {
-                        CommonUtils.getUtilInstance().showToast(LoginActivity.this,"请输入用户名");
+                        if(eventFlag==3)
+                        CommonUtils.getUtilInstance().showToast(LoginActivity.this,"请确认手机号是否正确");
+                        else
+                            CommonUtils.getUtilInstance().showToast(LoginActivity.this,"请输入用户名");
                     }
                 }
             }
@@ -519,8 +526,6 @@ public class LoginActivity extends AppCompatActivity implements okHttpUtil_JsonR
 
     @Override
     public void onResponse(JSONObject jsonObject) throws JSONException {
-
-
             int code = Integer.valueOf(jsonObject.getString("code"));
         Log.d("LoginActivity", "onResponse: "+code);
             Message msg;

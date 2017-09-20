@@ -45,7 +45,8 @@ public class CollectionManager implements okHttpUtil_JsonResponse {
         loginDataModel= (LoginDataModel) cache.getAsObject("loginModel");
         userModel=loginDataModel.getUserModel();
         Log.d(TAG, "CollectionManager: "+loginDataModel.getCollectionList().get(0).getUClurl().size());
-        collectionAdapter=new CollectionAdapter(loginDataModel.getCollectionList(),context);
+        collectionlist=loginDataModel.getCollectionList();
+        collectionAdapter=new CollectionAdapter(collectionlist,context);
     }
 
     public void doRefresh(){
@@ -56,8 +57,8 @@ public class CollectionManager implements okHttpUtil_JsonResponse {
                 map.put("uid",String.valueOf(userModel.getId()));
                 map.put("authkey",userModel.getAuth_key());
                 map.put("type", String.valueOf(StatusCode.REQUSET_REFLASH_COLLECTION));
-                okHttpUtil.instance.post(context, CommonUrl.trend,map,CollectionManager.this);
-                Log.d(TAG, "doRefresh: "+okHttpUtil.instance.pinjieurl(CommonUrl.collection,map));
+                okHttpUtil.instance.post(context, CommonUrl.collection,map,CollectionManager.this);
+                Log.d(TAG, "doRefresh??: "+okHttpUtil.instance.pinjieurl(CommonUrl.collection,map));
             }
         }.start();
     }
@@ -74,7 +75,7 @@ public class CollectionManager implements okHttpUtil_JsonResponse {
     public void onResponse(JSONObject jsonObject) throws JSONException {
         Message msg=handler.obtainMessage();
         int code= Integer.parseInt(jsonObject.getString("code"));
-        Log.d(TAG, "onResponse: "+code);
+        Log.d(TAG, "onResponse??: "+code);
         switch (code) {
             case StatusCode.REFLASH_COLLECTION_SUCCESS:
                 collectionlist.clear();

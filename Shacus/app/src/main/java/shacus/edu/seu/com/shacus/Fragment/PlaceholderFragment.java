@@ -44,7 +44,7 @@ public  class PlaceholderFragment extends android.support.v4.app.Fragment{
                 case StatusCode.REQUEST_YUEPAI_MODEL_LIST_SUCCESS:
                     last = 6;
                     DataManager.getPersonAdapter().refresh(DataManager.getYuepailist());
-                    DataManager.getPersonAdapter().notifyDataSetChanged();
+                   // DataManager.getPersonAdapter().notifyDataSetChanged();
                     refreshLayout.setRefreshing(false);
                     break;
                 case StatusCode.REQUEST_YUEPAI_MORE_GRAPH_LIST_SUCCESS:

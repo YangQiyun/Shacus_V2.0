@@ -12,7 +12,6 @@ import shacus.edu.seu.com.shacus.Fragment.BaseFragment;
 import shacus.edu.seu.com.shacus.Fragment.ForumFragment;
 import shacus.edu.seu.com.shacus.Fragment.MessageFragment;
 import shacus.edu.seu.com.shacus.Fragment.SelfDisplayFragment;
-import shacus.edu.seu.com.shacus.Fragment.TestFragment;
 import shacus.edu.seu.com.shacus.Fragment.yuepaiFragment;
 import shacus.edu.seu.com.shacus.R;
 import shacus.edu.seu.com.shacus.Utils.WeakRefHander;
@@ -46,8 +45,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         super.onResume();
         if(0==select){
             select=1;
-            BottomButton[2].callOnClick();}
-    }
+           BottomButton[2].callOnClick();}
+        int cuttent=0;
+        for(BaseFragment baseFragment:fragmentGroup){
+            if(baseFragment.isHidden())
+                cuttent++;
+        }
+        Log.d(TAG, "onResume: "+cuttent);
+        if(cuttent<=3){
+            hidefragment();
+            BottomButton[2].callOnClick();
+        }
+       }
 
 
     @Override

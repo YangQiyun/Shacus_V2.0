@@ -49,7 +49,8 @@
                 <ImageButton
                     android:id="@+id/btn_startyuepai"
                     android:src="@drawable/button_fgyuepai_titleadd2"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
                     android:layout_alignParentRight="true"
                     android:background="@color/transparent"
                     android:layout_width="wrap_content"
@@ -90,8 +91,8 @@
             android:id="@+id/tably_fgyuepai"
             android:layout_width="fill_parent"
             android:layout_height="44dp"
-            app:tabSelectedTextColor="@color/orange"
-            app:tabIndicatorColor="@color/darkorange"
+            app:tabSelectedTextColor="#c1cc65"
+            app:tabIndicatorColor="#a9b44d"
             app:tabTextColor="@color/gray_cc"
             app:tabIndicatorHeight="4dp"
             />

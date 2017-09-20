@@ -63,7 +63,7 @@ public class YuepaiInforActivity extends BaseActivity implements okHttpUtil_Json
                     upload.setBackgroundColor(Color.GRAY);
                     break;
                 case StatusCode.REQUEST_BAOMIN_DONE:
-                    Toast.makeText(YuepaiInforActivity.this,"您已报名",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(YuepaiInforActivity.this,"您已报名过",Toast.LENGTH_SHORT).show();
                     upload.setText("已报名");
                     upload.setClickable(false);
                     break;

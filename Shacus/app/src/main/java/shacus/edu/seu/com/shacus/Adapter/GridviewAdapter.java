@@ -64,7 +64,7 @@ public class GridviewAdapter extends BaseAdapter {
             imageView = (ImageView) convertView.findViewById(R.id.imgview);
             switch (url.size()) {
                 case 1:
-                    imageView.setLayoutParams(new GridView.LayoutParams(mImageWidth2*2,mImageWidth2*2));// 设置ImageView对象布局
+                    imageView.setLayoutParams(new GridView.LayoutParams(mImageWidth2*2,mImageWidth2/4*5));// 设置ImageView对象布局
                     break;
                 case 2:
                     imageView.setLayoutParams(new GridView.LayoutParams(mImageWidth2,mImageWidth2));

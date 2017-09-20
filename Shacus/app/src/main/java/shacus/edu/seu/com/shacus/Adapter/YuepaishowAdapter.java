@@ -48,6 +48,7 @@ public class YuepaishowAdapter extends BaseAdapter {
     }
     public void refresh(List<PhotographerModel> persons) {
         this.rankList = persons;
+        notifyDataSetChanged();
     }
 
     @Override

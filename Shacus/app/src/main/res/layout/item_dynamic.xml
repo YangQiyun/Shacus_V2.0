@@ -115,7 +115,7 @@
           android:layout_marginTop="30dp"
           android:layout_marginLeft="@dimen/dp_10"
           android:layout_marginRight="@dimen/dp_10"
-          android:textColor="#9e3737"
+          android:textColor="@color/black"
           android:textSize="14sp"
           android:typeface="serif"
           android:text="组建上海拍摄小组（人数10人）"/>
