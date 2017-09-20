@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="shacus.edu.seu.com.shacus.Activity.PhotosetOverviewActivity">
+    <include layout="@layout/photoset_toolbar_layout"
+        android:id="@+id/toolbar_photoset"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"/>
+    <ListView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/toolbar_photoset"
+
+        android:orientation="horizontal"
+        android:id="@+id/photoset_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp"
+        android:listSelector="@color/transparent"
+        android:divider="@color/lightgray"
+        android:scrollbars="none">
+    </ListView>
+    </RelativeLayout>

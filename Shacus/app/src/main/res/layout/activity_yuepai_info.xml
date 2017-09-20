@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/fcactivity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:textSize="20dp"
+                android:text="约拍详情"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+
+            <ImageButton
+                android:id="@+id/backbtn"
+                android:background="@drawable/backbtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"/>
+
+
+            <ImageButton
+                android:visibility="invisible"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/headimge"
+          />
+
+        <LinearLayout
+            android:layout_toRightOf="@id/headimge"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:text="十里开外"
+                />
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:textColor="@color/gray_8f"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="12dp"
+                android:text="43分钟前"
+                />
+        </LinearLayout>
+
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/guanzhu"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@color/transparent"-->
+            <!--android:src="@drawable/btn_dynamic_like_selector"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--/>-->
+
+    </RelativeLayout>
+    </LinearLayout>
+    <shacus.edu.seu.com.shacus.View.MyGridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </shacus.edu.seu.com.shacus.View.MyGridView>
+    <LinearLayout
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/info_leixing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black_v1_p80"
+           android:gravity="start"
+            android:text="约拍类型 : 访客写真"/>
+        <TextView
+            android:id="@+id/info_part"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black_v1_p80"
+            android:gravity="start"
+            android:text="面向地区 : 江苏南京"/>
+        <TextView
+            android:id="@+id/info_time"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black_v1_p80"
+            android:gravity="start"
+            android:text="时间要求 : 能一小时以上的"/>
+        <TextView
+            android:id="@+id/info_price"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black_v1_p80"
+            android:gravity="start"
+            android:text="费用说明 : 按你的能力说话谢谢啦"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black_v1_p80"
+            android:gravity="start"
+            android:text="拍拍留言 :"/>
+        <TextView
+            android:id="@+id/info_say"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black_v1_p80"
+            android:gravity="start"
+            android:text="费用说明按你的能力说话按你的能力说话谢按你按你的能力说话谢按你的能力说话谢按你的能力说话谢按你的能力说话谢的能力说话谢按你的能力说话谢按你的能力说话谢谢谢啦"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/info_upload"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="20sp"
+        android:text="报       名"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="BaseRecyclerViewAdapterHelper-2.9.21">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.CymChad/BaseRecyclerViewAdapterHelper/2.9.21/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.CymChad/BaseRecyclerViewAdapterHelper/2.9.21/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.CymChad/BaseRecyclerViewAdapterHelper/2.9.21/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.CymChad/BaseRecyclerViewAdapterHelper/2.9.21/5c145e3da08818203f5d04ef35800a7af6875f32/BaseRecyclerViewAdapterHelper-2.9.21-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

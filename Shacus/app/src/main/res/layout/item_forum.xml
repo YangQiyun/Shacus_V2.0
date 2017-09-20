@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="5dp"
+        android:layout_height="wrap_content">
+
+        <shacus.edu.seu.com.shacus.View.CircleImageView
+            android:contentDescription="aa"
+            android:id="@+id/photoset_publish_user_avatar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/p2"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/photoset_publish_user_avatar"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/publish_user_name"
+                android:layout_centerInParent="true"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:text="用户昵称"/>
+            <TextView
+                android:id="@+id/forum_time"
+                android:text="12-12-12"
+                android:textSize="9sp"
+                android:layout_marginTop="3dp"
+                android:maxLines="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_add_favor"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_border_unselected"
+            android:text="+关注"
+            android:textSize="14sp"
+            android:textColor="@color/cornflowerblue"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#000000"
+        android:id="@+id/tv_photoset_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:fontFamily="SERIF"
+        android:maxLines="1"
+        android:text="试试看"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:id="@+id/ll_photoset_square_imgs"
+        android:orientation="horizontal">
+
+        <shacus.edu.seu.com.shacus.View.SquareImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/photoset_img_1"
+            android:src="@drawable/holder_square"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"/>
+
+        <shacus.edu.seu.com.shacus.View.SquareImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/photoset_img_2"
+            android:src="@drawable/holder_square"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/photoset_img_frame"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1">
+
+            <shacus.edu.seu.com.shacus.View.SquareImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/photoset_img_3"
+                android:src="@drawable/holder_square"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/photoset_img_count"
+                android:background="#000000"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:text="..."/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_item_detail__layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_photoset_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:maxLines="1"
+            android:text="ddddd"/>
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_photoset_likecount"
+            android:text="0赞同·0评论"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

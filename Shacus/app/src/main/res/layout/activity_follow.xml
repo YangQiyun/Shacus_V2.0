@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="shacus.edu.seu.com.shacus.Activity.FollowActivity">
+
+    <!--返回标题-->
+    <include layout="@layout/follow_toolbar_layout"
+        android:id="@+id/toolbar_follow"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"/>
+<!--    <RelativeLayout
+        android:id="@+id/t"
+        android:background="@color/toolbar_white"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+
+        <TextView
+            android:id="@+id/follow"
+            android:textSize="20dp"
+            android:text="follow"
+            android:textColor="@color/zero_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+
+        <ImageButton
+            android:id="@+id/backbtn"
+            android:background="@drawable/backbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"/>
+
+
+        <ImageButton
+            android:visibility="invisible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>-->
+
+    <!--关注或粉丝列表-->
+    <ListView
+
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/toolbar_follow"
+
+        android:id="@+id/follow_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp"
+        android:listSelector="@color/transparent"
+        android:divider="@color/lightgray"
+        android:scrollbars="none">
+    </ListView>
+    <!-- android:layout_below="@+id/t"-->
+    <TextView
+        android:textColor="@color/black_v2"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:id="@+id/follow_extra"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text= "无"/>
+
+</RelativeLayout>

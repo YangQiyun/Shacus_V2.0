@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_4"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp">
+
+      <de.hdodenhof.circleimageview.CircleImageView
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_centerVertical="true"
+          android:src="@drawable/user_avatar"
+          android:id="@+id/Imav_touxiang"
+          android:contentDescription="@string/app_name"/>
+
+      <LinearLayout
+          android:layout_toRightOf="@id/Imav_touxiang"
+          android:layout_centerVertical="true"
+          android:orientation="vertical"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="12dp"
+            android:text="十里开外"
+            />
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:textColor="@color/gray_8f"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="12dp"
+            android:text="43分钟前"
+            />
+      </LinearLayout>
+
+
+      <ImageButton
+          android:id="@+id/dynamic_guanzhu"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:background="@color/transparent"
+          android:src="@drawable/btn_dynamic_like_selector"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          />
+
+    </RelativeLayout>
+</LinearLayout>
+  <shacus.edu.seu.com.shacus.View.MyGridView
+      android:id="@+id/gridview"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+  </shacus.edu.seu.com.shacus.View.MyGridView>
+    <TextView
+        android:id="@+id/dynamic_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:textColor="#45ab67"
+        android:textSize="14sp"
+        android:typeface="sans"
+        android:text="'追影设计'绥靖创封过"/>
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:textColor="#060606"
+        android:textSize="14sp"
+        android:typeface="serif" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:layout_marginLeft="@dimen/dp_10"
+          android:layout_marginRight="@dimen/dp_10"
+          android:textColor="#060606"
+          android:textSize="14sp"
+          android:typeface="serif"
+          android:maxLines="1"
+          android:text="___________________________________________________________________"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:layout_marginLeft="@dimen/dp_10"
+          android:layout_marginRight="@dimen/dp_10"
+          android:textColor="#9e3737"
+          android:textSize="14sp"
+          android:typeface="serif"
+          android:text="组建上海拍摄小组（人数10人）"/>
+      <ProgressBar
+          android:max="100"
+          android:progress="20"
+          style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+          android:layout_margin="@dimen/dp_10"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+  </LinearLayout>
+
+
+
+
+
+

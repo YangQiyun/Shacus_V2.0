@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <ImageButton
+            android:id="@+id/btn_favor"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/btn_favor_selector"
+            android:scaleType="centerInside" />
+
+        <ImageButton
+            android:id="@+id/sendremark"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_send" />
+
+        <EditText
+            android:id="@+id/et_add_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_toLeftOf="@id/sendremark"
+            android:layout_toRightOf="@id/btn_favor"
+            android:background="@color/themecolor"
+            android:hint="添加评论"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/remark"
+        android:background="@color/gainsboro" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/title_remark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/divider">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/themecolor"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/title_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+
+                    <LinearLayout
+                        android:id="@+id/theme_remark"
+                        android:layout_below="@id/title_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical"
+                        app:layout_scrollFlags="scroll|snap">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="0dp">
+
+                            <shacus.edu.seu.com.shacus.View.CircleImageView
+                                android:id="@+id/forum_publish_user_avatar"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="5dp"
+                                android:contentDescription="aa"
+                                android:src="@drawable/p2" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_toRightOf="@+id/forum_publish_user_avatar"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/forumer_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:textColor="@color/aa_black"
+                                    android:maxLines="1"
+                                    android:text="用户昵称"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/forum_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/aa_black"
+                                    android:maxLines="1"
+                                    android:text="12-12-12"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/favor_remark_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/aa_black"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:text="0赞同·0评论" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_forum_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="ddddd"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_pictures"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    app:contentInsetStart="0.0dp"
+                    android:background="@color/themecolor"
+                    app:layout_collapseMode="pin">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:id="@+id/btn_forum_back"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="#00000000"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/backbtn" />
+
+                        <TextView
+                            android:id="@+id/theme_forum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/white"
+                            android:text="主题帖"
+                            android:textSize="20dp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_forum_addcollect"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/btn_praise_selector"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <TextView
+                android:id="@+id/noremark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="暂无评论"
+                android:visibility="gone" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_remark"
+            android:layout_width="match_parent"
+            android:background="@color/whitesmoke"
+            android:divider="@color/themecolor"
+            android:dividerHeight="2dp"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

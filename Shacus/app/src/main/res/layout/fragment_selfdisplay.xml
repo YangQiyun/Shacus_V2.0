@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:overScrollMode="always">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants">
+
+            <RelativeLayout
+                android:id="@+id/head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+               <!-- <ImageView
+                    android:maxHeight="250dp"
+                    android:adjustViewBounds="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/huodong_loading"
+                    android:id="@+id/bigimageView" />-->
+
+
+<!-- android:layout_alignRight="@id/bigimageView"-->
+                <!--android:layout_alignBottom="@id/bigimageView"-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:background="@color/white"
+                    android:id="@+id/relativeLayout">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/black_v3">
+                        <ImageView
+                            android:id="@+id/background_photo"
+                             android:maxHeight="150dp"
+                             android:layout_width="match_parent"
+                            android:scaleType="fitXY"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/background_2"
+                            android:adjustViewBounds="true"
+
+                      />
+
+                        <ImageButton
+
+                            android:id="@+id/add_btn"
+                            android:background="@drawable/photo_add"
+                            android:layout_margin="10dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:layout_alignParentEnd="true"
+                            />
+                        <ImageButton
+                            android:id="@+id/backbtn"
+                            android:background="@drawable/backbtn"
+                            android:layout_margin="10dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:gravity="center"
+                            android:layout_alignParentStart="true"
+                            />
+                        <TextView
+                            android:id="@+id/othername"
+                            android:text="个人主页"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/lightgoldenrodyellow"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="20sp" />
+                    <!-- android:layout_centerHorizontal="true"-->
+                        <Button
+                            android:id="@+id/edit_info"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:text="编辑资料"
+                            android:textSize="14sp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/ff_white"
+                            android:background="#EBD521"
+                            />
+
+                    <TextView
+                        android:id="@+id/textData_UserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="130dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/lightgoldenrodyellow"
+                        android:text="昵称"/>
+
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/relativeLayout"
+                    android:background="@color/content_cutting_gray_b3"></LinearLayout>-->
+
+                <shacus.edu.seu.com.shacus.View.CircleImageView
+
+                    android:layout_marginTop="110dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/imageData_UserImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/head1"
+                  />
+
+                <RelativeLayout
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="150dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/sex"
+
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="130dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/female"/>
+                    <!--android:layout_toRightOf="@id/textData_UserName"-->
+
+                    <TextView
+                        android:id="@+id/textData_UserAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_toRightOf="@id/sex"
+                        android:textColor="@color/black_v2"
+                        android:layout_centerVertical="true"
+
+                        android:text="21岁" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/local"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/info"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="130dp">
+
+                    <ImageView
+                        android:src="@drawable/localbtn"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/textData_UserLocal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/info"
+                        android:textSize="@dimen/sp_14"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/black_v2"
+                        android:text="江苏 南京"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/textData_UserSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_below="@id/local"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="15sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="130dp"
+                    android:textColor="@color/black_v2"
+                    android:text="个人简介--我是追影人"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/blank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head"
+                android:textSize="5sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/transparent" />
+
+
+            <TextView
+                android:id="@+id/space2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head"
+                android:textSize="5sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/transparent" />
+
+
+
+            <LinearLayout
+                android:id="@+id/body_btn"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/space2">
+
+                <View
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dip"
+                    android:background="@color/content_cutting_gray_b3"
+                    android:layout_gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:id="@+id/btn3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/transparent"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/myYuepiaBtn"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_gravity="center_vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/black_v1_p80"
+                            android:id="@+id/myYuepaiNum"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="约拍"
+                            android:textColor="@color/black_v2"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+
+                    </LinearLayout>
+
+                    <!--<View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/zero_black"
+                        android:layout_gravity="center_horizontal" />-->
+                    <LinearLayout
+                        android:id="@+id/followingBtn"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/black_v1_p80"
+                            android:id="@+id/followingNum"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="关注"
+                            android:textColor="@color/black_v2"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:textSize="14sp"/>
+
+
+                    </LinearLayout>
+                    <!--<View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/zero_black"
+                        android:layout_gravity="center_horizontal"
+                        />-->
+                    <LinearLayout
+                        android:id="@+id/followerBtn"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/black_v1_p80"
+                            android:id="@+id/followerNum"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="粉丝"
+                            android:textColor="@color/black_v2"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:textSize="14sp"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dip"
+                    android:background="@color/content_cutting_gray_b3"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/grzp"
+                android:orientation="vertical"
+                android:layout_below="@id/body_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/black_v1_p80"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个人照片"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/grzp_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/zero_black"
+                    android:text="暂无个人照片"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:weightSum="3">
+
+                    <shacus.edu.seu.com.shacus.View.SquareImageView
+                        android:visibility="visible"
+                        android:id="@+id/grzp_i1"
+                        android:scaleType="centerCrop"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/holder_square"
+                        android:layout_marginRight="5dp" />
+
+                    <shacus.edu.seu.com.shacus.View.SquareImageView
+                        android:id="@+id/grzp_i2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/holder_square"
+                        android:visibility="invisible" />
+
+
+                    <!--<ImageView
+                        android:visibility="invisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/grzp_i3"
+                        android:src="@drawable/grzp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginRight="5dp"/>-->
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <shacus.edu.seu.com.shacus.View.SquareImageView
+                            android:visibility="invisible"
+                            android:background="@color/zero_black"
+                            android:id="@+id/grzp_i4"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/grzp"/>
+
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/grzp_im"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="+23"
+                            android:gravity="center"
+                            android:textSize="35dp"
+                            android:textColor="@color/ff_white"
+                            android:background="#55000000"/>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+
+                    android:background="@color/zero_black"
+                    android:layout_gravity="center_vertical"/>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/zpj"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/grzp">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/black_v1_p80"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="作品集"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/zpj_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/zero_black"
+                    android:text="暂无作品集"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:weightSum="3">
+
+                    <shacus.edu.seu.com.shacus.View.SquareImageView
+                        android:visibility="visible"
+                        android:id="@+id/zpj_i1"
+                        android:scaleType="centerCrop"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/holder_square"
+                        android:layout_marginRight="5dp"/>
+
+                    <shacus.edu.seu.com.shacus.View.SquareImageView
+                        android:id="@+id/zpj_i2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/grzp"
+                        android:visibility="invisible" />
+
+                    <!--<ImageView
+                        android:visibility="invisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/zpj_i3"
+                        android:src="@drawable/setting"
+                        android:scaleType="fitCenter"
+                        android:layout_marginRight="5dp"/>-->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <shacus.edu.seu.com.shacus.View.SquareImageView
+                            android:visibility="invisible"
+                            android:id="@+id/zpj_i4"
+                            android:layout_width="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/grzp"/>
+
+                        <TextView
+                            android:visibility="invisible"
+                            android:id="@+id/zpj_im"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="+233"
+                            android:gravity="center"
+                            android:textSize="35dp"
+                            android:textColor="@color/ff_white"
+                            android:background="#55000000"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/zero_black"
+                    android:layout_gravity="center_vertical"/>
+                  -->
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- 与发起者聊天按钮 -->
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/layout_otheruser_chat"
+        android:layout_alignParentBottom ="true"
+        android:orientation="horizontal">-->
+       <!-- <Button
+            android:id="@+id/addfollow"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/followbtn_selector"
+            android:text="@string/layout_otheruser_chat"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content" />-->
+        <!--<Button
+            android:id="@+id/btn_yuepai_chat"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/followbtn_selector"
+            android:text="@string/layout_otheruser_chat"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content" />-->
+        <!--<Button
+            android:id="@+id/btn_common_chat"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/followbtn_selector"
+            android:text="@string/common_chat"
+            android:textColor="#ffffff"/>
+    </LinearLayout>-->
+
+</RelativeLayout>

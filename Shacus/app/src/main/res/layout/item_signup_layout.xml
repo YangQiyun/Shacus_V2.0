@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--我的约拍申请用户单项布局-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <shacus.edu.seu.com.shacus.View.CircleImageView
+        android:id="@+id/following_user_image"
+        android:src="@drawable/p3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:textColor="@color/zero_black"
+        android:textSize="16sp"
+        android:text="我的好友"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/following_user_image"
+        android:layout_toEndOf="@+id/following_user_image"
+        android:id="@+id/following_user_name" />
+
+    <TextView
+        android:id="@+id/following_user_signature"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的签名"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/following_user_image"
+        android:layout_alignBottom="@+id/following_user_image" />
+
+    <Button
+        android:textColor="@color/zero_black"
+        android:background="@drawable/shape_button"
+        android:text="允许"
+        android:textSize="14sp"
+        android:id="@+id/followedbtn"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

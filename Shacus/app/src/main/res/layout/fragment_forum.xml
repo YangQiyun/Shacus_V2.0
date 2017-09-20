@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:background="@color/themecolor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/btn_remind"
+            android:layout_marginStart="8dp"
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true"
+            android:background="#00000000"
+            android:id="@+id/ibtn_message"
+            />
+        <TextView
+            android:text=""
+            android:layout_width="5dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/centerTv" />
+
+        <Button
+            android:id="@+id/btn_community"
+            android:text="社区"
+            android:layout_marginEnd="-8dp"
+            android:background="@drawable/btn_community_selector"
+            android:layout_toLeftOf="@id/centerTv"
+            android:layout_centerInParent="true"
+            android:layout_width="60dp"
+            android:layout_height="35dp" />
+
+
+        <Button
+            android:id="@+id/btn_mine"
+            android:text="我的"
+            android:layout_width="60dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/btn_myforum_selector"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/centerTv"
+            android:layout_height="35dp" />
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/btn_edit"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true"
+            android:background="#00000000"
+            android:id="@+id/ibtn_publish"
+             />
+
+    </RelativeLayout>
+
+    <TextView
+        android:background="@color/gray_cc"
+        android:layout_width="match_parent"
+        android:layout_height="4dp" />
+
+
+    <FrameLayout
+        android:id="@+id/forumfragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</LinearLayout>

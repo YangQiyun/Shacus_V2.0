@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Shacus</string>
+    <string name="forum_title">luntanbaoti</string>
+    <string name="upload">upload</string>
+    <string name="add_forum">发布问题帖</string>
+    <string name="forum_content">请输入问题的详细描述（不少于15字）</string>
+    <string name="temp">详细介绍详细介绍详详细介绍详详细介绍详详细介绍详细介描述信息描述信息，描述信息，描述。描述信息描述信息描述信息描述信息。</string>
+    <string name="temp_time">2017-2-6</string>
+    <string name="photoset_upload">添加图片/修改描述</string>
+    <string name="photoset_delete">删除所选</string>
+    <string name="take_picture">拍照</string>
+    <string name="select_local_picture">选择本地图片</string>
+    <string name="cancel">取消</string>
+    <drawable name="followt">#ccE6BF66</drawable>
+    <drawable name="followf">#cc000000</drawable>
+    <string name="photoself_upload">添加个人照片</string>
+    <string name="yuepai_create_theme">请输入标题</string>
+    <declare-styleable name="SwipeFlingAdapterView">
+        <attr name="SwipeFlingStyle" format="reference" />
+        <attr name="rotation_degrees" format="float" />
+        <attr name="min_adapter_stack" format="integer" />
+        <attr name="max_visible" format="integer" />
+    </declare-styleable>
+    <color name="card_background">#ffffff</color>
+    <color name="card_shadow">#10000000</color>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="create_yuepai_describe_new">请填写详细介绍及要求，例如是否提供服装、化妆、样片等</string>
+    <string name="no_more_than_9">对不起，最多只能上传9张图片</string>
+    <string name="publish_theme_after_login">请先登录</string>
+    <string name="publish_yuepai_sucess">创建约拍成功，上传图片中</string>
+    <string-array name="yuepai_leixing">
+        <item>写真客片</item>
+        <item>记录随拍</item>
+        <item>练手互勉</item>
+        <item>活动跟拍</item>
+        <item>商业拍摄</item>
+    </string-array>
+
+    <string-array name="yuepai_diqu">
+        <item>江苏南京</item>
+    </string-array>
+
+    <string-array name="yuepai_jiage">
+        <item>希望收费</item>
+        <item>最多付费</item>
+        <item>希望互勉</item>
+        <item>价格商议</item>
+    </string-array>
+
+    <string name="create_yuepai_describe">请输入详细介绍及要求</string>
+    <string name="border_top">Border Top</string>
+    <string name="border_bottom">Border Bottom</string>
+    <string name="image_url">Image Url</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">在ListView中加载远程图片</string>
+    <string name="sun_refresh_style">Sun refresh style</string>
+    <string name="jet_refresh_style">Jet refresh style</string>
+    <string name="polite_message">Wait a moment please. Breathe deeply and watch beautiful animation.</string>
+    <string name="trip_to_india">Trip to India</string>
+    <string name="trip_to_italy">Trip to Italy</string>
+    <string name="trip_to_indonesia">Trip to Indonesia</string>
+</resources>

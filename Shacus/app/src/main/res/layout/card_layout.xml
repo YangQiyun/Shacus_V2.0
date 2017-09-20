@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEEEEEE"
+    android:clipChildren="false">
+
+    <!--底部四个按钮，注释了一个，这里为3个按钮，不喜欢，喜欢，和私信按钮-->
+    <include
+        android:id="@+id/swipe_fling_bottom"
+        layout="@layout/layout_swipe_fling_bottom" />
+
+    <!--卡片主布局,在底部四个按钮之上-->
+    <shacus.edu.seu.com.shacus.swipecards.view.SwipeFlingView
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/swipe_fling_bottom"
+        android:layout_marginTop="-50dp"
+        android:clipChildren="false"
+        app:rotation_degrees="12" />
+
+
+    <!-- 点开已添加的图片查看大图 -->
+    <RelativeLayout
+        android:id="@+id/display_recommand_photoset_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/zero_black"
+        android:visibility="gone" >
+
+        <shacus.edu.seu.com.shacus.Adapter.UploadViewPager
+            android:id="@+id/photoset_detail_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/photoset_position_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textColor="@color/ff_white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

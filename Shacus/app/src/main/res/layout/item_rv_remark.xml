@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="4dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="30dp">
+
+        <shacus.edu.seu.com.shacus.View.CircleImageView
+            android:contentDescription="aa"
+            android:id="@+id/remark_user_avatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/p2"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/remark_user_avatar"
+            android:id="@+id/remark_user_name"
+            android:layout_marginStart="8dp"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:text="用户昵称"/>
+        <TextView
+            android:text="12-12-12"
+            android:id="@+id/remark_time"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_remark_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:text="评论内容"/>
+
+</LinearLayout>

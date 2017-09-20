@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    ​
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_fgyuepai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+        ​<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_scrollFlags="scroll|snap">
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/Cltoolbar_fgyuepai"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+
+            >
+            <cn.bingoogolapple.bgabanner.BGABanner
+                android:windowTranslucentStatus="true"
+                android:windowTranslucentNavigation="true"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/banner_main_zoom"
+                style="@style/BannerDefaultStyle"
+                app:banner_transitionEffect="zoom"
+                 />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_fgyuepai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Light">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/btn_startyuepai"
+                    android:src="@drawable/button_fgyuepai_titleadd2"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                />
+
+                ​<LinearLayout
+                android:layout_marginLeft="85dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/brown"
+                    android:textSize="18dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:text="name" />​
+                <TextView
+                    android:id="@+id/user_qianmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                    />
+            </LinearLayout>
+            </RelativeLayout>
+
+
+
+        ​</android.support.v7.widget.Toolbar>
+    </LinearLayout>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tably_fgyuepai"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            app:tabSelectedTextColor="@color/orange"
+            app:tabIndicatorColor="@color/darkorange"
+            app:tabTextColor="@color/gray_cc"
+            app:tabIndicatorHeight="4dp"
+            />
+    </android.support.design.widget.AppBarLayout>
+    ​
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_fgyuepai"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+
+    <shacus.edu.seu.com.shacus.View.CircleImageView
+        android:id="@+id/profile_fgyuepai"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/user_avatar"
+        app:layout_anchor="@id/tably_fgyuepai"
+        android:elevation="20dp"
+        app:layout_anchorGravity="top|left"
+        />
+
+
+
+        <com.ddz.floatingactionbutton.FloatingActionMenu
+            android:id="@+id/floatingbuttonMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:fab_addButtonColorNormal="@color/white"
+            app:fab_addButtonColorPressed="@color/gray_cc"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="16dp"
+           android:layout_marginBottom="@dimen/dp_10"
+            app:fab_addButtonSize="normal"
+            app:fab_addButtonPlusIconColor="@color/colorPrimary"
+            app:fab_labelStyle="@style/lable_style"
+            >
+
+            <com.ddz.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/white"
+                app:fab_colorPressed="@color/gray_cc"
+                app:fab_icon="@drawable/button_yuepai_a"
+                app:fab_title="想拍人" />
+
+            <com.ddz.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/white"
+                app:fab_colorPressed="@color/gray_cc"
+                app:fab_icon="@drawable/button_yuepai_b"
+                app:fab_size="normal"
+                app:fab_title="想被拍" />
+
+            <com.ddz.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/white"
+                app:fab_colorPressed="@color/gray_cc"
+                app:fab_icon="@drawable/button_yuepai_c"
+                app:fab_size="normal"
+                app:fab_title="约拍伴侣" />
+        </com.ddz.floatingactionbutton.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>

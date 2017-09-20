@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--我的粉丝单项布局-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <shacus.edu.seu.com.shacus.View.CircleImageView
+        android:id="@+id/follower_user_image"
+        android:src="@drawable/head1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+       />
+
+    <TextView
+        android:textColor="@color/zero_black"
+        android:id="@+id/follower_user_name"
+        android:textSize="16sp"
+        android:text="我的粉丝"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/follower_user_image"
+        android:layout_toEndOf="@+id/follower_user_image" />
+
+    <Button
+        android:background="@drawable/shape_button"
+        android:textColor="@color/zero_black"
+        android:textSize="14sp"
+        android:id="@+id/followingbtn"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:text="关注"/>
+
+</RelativeLayout>

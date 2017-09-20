@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <include
+        layout="@layout/photoset_toolbar_layout"
+        android:id="@+id/photoset_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/ll_setcontent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/zero_black"
+                android:id="@+id/photoset_detail_describtion"
+                android:textSize="14sp"
+                android:text="@string/temp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/zero_black"
+                android:textSize="16sp"
+                android:gravity="end"
+                android:id="@+id/photoset_detail_time"
+                android:text="@string/temp_time"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_setcontent">
+
+            <HorizontalScrollView
+                android:layout_marginTop="10dp"
+                android:id="@+id/photoset_like_user_scroll"
+                android:layout_marginRight="110dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" >
+
+                <LinearLayout
+                    android:id="@+id/photoset_linear_join_user_scroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <GridView
+                        android:id="@+id/photoset_grid_join_user_scroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                    </GridView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/btn_photoset_likecount"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginRight="60dp"
+                android:textColor="@color/content_gray"
+                android:text="0"
+                android:textSize="14sp"
+                android:visibility="visible"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageButton
+                android:id="@+id/btn_photoset_addlike"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:visibility="visible"
+                android:background="@drawable/btn_praise_selector"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/fluid_list"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:id="@+id/btn_add_photo"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/photo_add"/>
+
+    <!-- 底部菜单（仅在编辑模式显示） -->
+    <FrameLayout
+        android:id="@+id/photoset_bottom"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#ccE6BF66">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/photoset_delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/ff_white"
+                android:text="@string/photoset_delete"
+                android:textColor="@color/black_v1_p80"
+                android:textSize="14sp" />
+        <Button
+            android:id="@+id/photoset_upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_green"
+            android:text="@string/photoset_upload"
+            android:textColor="@color/ff_white"
+            android:textSize="14sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 点开已添加的图片查看大图 -->
+    <RelativeLayout
+        android:id="@+id/display_photoset_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/zero_black"
+        android:visibility="gone" >
+
+        <shacus.edu.seu.com.shacus.Adapter.UploadViewPager
+            android:id="@+id/photoset_detail_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/photoset_position_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textColor="@color/ff_white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>
