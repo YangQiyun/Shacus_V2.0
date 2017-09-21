@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -133,11 +132,16 @@ public class ForumMineFragment extends BaseFragment implements AbsListView.OnScr
 //        pullRefreshLayout.setColorSchemeColors(int []);
 //        pullRefreshLayout.setColor(int);
 
+        refresh();
         return mRootView;
     }
 
     public int getBootCounter() {
         return bootCounter;
+    }
+
+    public void refresh(){
+        forumItemManager.doRefresh();
     }
 
     @Override
@@ -150,7 +154,7 @@ public class ForumMineFragment extends BaseFragment implements AbsListView.OnScr
                 //不处于加载状态的话对其进行加载
                 isLoading = true;
                 //设置刷新界面可见
-                loadmoreView.setVisibility(View.VISIBLE);
+                loadmoreView.setVisibility(View.GONE);
                 Log.e("loadmoreViewisLoading","VISIBLE");
                 onLoad();
             }

@@ -101,6 +101,7 @@ public class ForumFragment extends BaseFragment implements View.OnClickListener 
                     transaction.add(R.id.forumfragment_layout,forumCommunityFragment);
                 }else{
                     transaction.show(forumCommunityFragment);
+                    forumCommunityFragment.refresh();
                 }
                 break;
             case R.id.btn_mine:
@@ -114,6 +115,7 @@ public class ForumFragment extends BaseFragment implements View.OnClickListener 
                     transaction.add(R.id.forumfragment_layout,forumMineFragment);
                 }else{
                     transaction.show(forumMineFragment);
+                    forumMineFragment.refresh();
                 }
                 break;
             case R.id.ibtn_publish:

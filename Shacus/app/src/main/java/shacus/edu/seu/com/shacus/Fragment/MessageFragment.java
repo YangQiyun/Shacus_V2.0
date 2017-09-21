@@ -10,16 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
 import io.rong.imkit.RongIM;
 import io.rong.imkit.fragment.ConversationListFragment;
-import io.rong.imkit.utils.StringUtils;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
 import io.rong.imlib.model.UserInfo;
@@ -29,12 +21,7 @@ import shacus.edu.seu.com.shacus.Data.Model.LoginDataModel;
 import shacus.edu.seu.com.shacus.Data.Model.UserModel;
 import shacus.edu.seu.com.shacus.DemoContext;
 import shacus.edu.seu.com.shacus.MyApplication;
-import shacus.edu.seu.com.shacus.Network.okHttpUtil;
-import shacus.edu.seu.com.shacus.Network.okHttpUtil_JsonResponse;
 import shacus.edu.seu.com.shacus.R;
-import shacus.edu.seu.com.shacus.Utils.CommonUrl;
-
-import static shacus.edu.seu.com.shacus.Utils.StatusCode.WANT_FORUM_DETAIL;
 
 /**
  * Created by Administrator on 2017/9/19.
@@ -130,16 +117,27 @@ public class MessageFragment extends BaseFragment {
                 public void onSuccess(String userid) {
                     Log.e("LoginActivity", "--onSuccess" + userid);
                     isReconnect();
+                    /**
+                     * 设置当前用户信息，
+                     * @param userInfo 当前用户信息
+                     */
+                    RongIM.getInstance().setCurrentUserInfo(new UserInfo(userModel.getId(), userModel.getNickName(), Uri.parse(userModel.getHeadImage())));
+                    /**
+                     * 设置消息体内是否携带用户信息。
+                     * @param state 是否携带用户信息，true 携带，false 不携带。
+                     */
+                    RongIM.getInstance().setMessageAttachedUserInfo(true);
+
                     RongIM.getInstance().refreshUserInfoCache(new UserInfo(userModel.getId(), userModel.getNickName(), Uri.parse(userModel.getHeadImage())));
-                    RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
-
-                        @Override
-                        public UserInfo getUserInfo(String userId) {
-
-                            return findUserById(userId);//根据 userId 去你的用户系统里查询对应的用户信息返回给融云 SDK。
-                        }
-
-                    }, true);
+//                    RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
+//
+//                        @Override
+//                        public UserInfo getUserInfo(String userId) {
+//
+//                            return findUserById(userId);//根据 userId 去你的用户系统里查询对应的用户信息返回给融云 SDK。
+//                        }
+//
+//                    }, true);
                 }
 
                 /**
@@ -237,21 +235,23 @@ public class MessageFragment extends BaseFragment {
             });
         }
     }
-    private UserInfo findUserById(String userId){
-        ACache cache = ACache.get(getActivity());
-        UserModel userModel = (UserModel) cache.getAsObject("rongusermodel"+userId);
-        String defaultname="追影用户";
-        String defaultimage="http://oci8c6557.bkt.clouddn.com/user-default-image.jpg?imageView2/1/w/200/h/200&e=1505900651&token=yzAza_Cm87nXkh9IyFfpg7LL7qKJ097VK5IOpLj0:S6iMexrqPL-wUd1Lh60Vg81s4ws=";
-        Uri temp;
-        if(userModel.getHeadImage()==null)
-         temp=Uri.parse(defaultimage);
-        else
-            temp=Uri.parse(userModel.getHeadImage());
-
-        if(userModel==null)
-            return new UserInfo(userId,defaultname,temp);
-        return new UserInfo(userId, userModel.getNickName(),temp);
-
-    }
+//    private UserInfo findUserById(String userId){
+//        ACache cache = ACache.get(getActivity());
+//        UserModel userModel = (UserModel) cache.getAsObject("rongusermodel"+userId);
+//        String defaultname="追影用户";
+//        String defaultimage="http://oci8c6557.bkt.clouddn.com/user-default-image.jpg?imageView2/1/w/200/h/200&e=1505900651&token=yzAza_Cm87nXkh9IyFfpg7LL7qKJ097VK5IOpLj0:S6iMexrqPL-wUd1Lh60Vg81s4ws=";
+//        Uri temp=Uri.parse(defaultimage);
+//        if(userModel==null){
+//            UserModel userModel1=new UserModel();
+//            userModel1.setNickName("追影用户");
+//            userModel1.setId(userId);
+//            userModel1.setHeadImage(defaultimage);
+//            cache.put("rongusermodel"+userId,userModel1);
+//            return new UserInfo(userId,defaultname,temp);}
+//        if(userModel.getHeadImage()!=null)
+//         temp=Uri.parse(userModel.getHeadImage());
+//        return new UserInfo(userId, userModel.getNickName(),temp);
+//
+//    }
 
 }

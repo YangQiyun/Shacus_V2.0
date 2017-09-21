@@ -505,6 +505,9 @@ public class LoginActivity extends AppCompatActivity implements okHttpUtil_JsonR
                     startActivity(intent);
                      finish();
                 }
+                if(msg.what==100005){
+                    CommonUtils.getUtilInstance().showToast(MyApplication.getContext(), "该手机号已被注册过，请直接登录");
+                }
             }
         };
 
@@ -642,6 +645,10 @@ public class LoginActivity extends AppCompatActivity implements okHttpUtil_JsonR
                     mess.what=998;
                     mHandler.sendMessage(mess);
                     break;
+                case 100005://请求注册但是手机号验证过了
+                    msg=mHandler.obtainMessage();
+                    msg.what= 100005;
+                    mHandler.sendMessage(msg);
                 default:
                     if (eventFlag!=5)
                         eventFlag=3;

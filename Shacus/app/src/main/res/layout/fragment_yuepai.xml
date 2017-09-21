@@ -141,7 +141,7 @@
                 app:fab_colorNormal="@color/white"
                 app:fab_colorPressed="@color/gray_cc"
                 app:fab_icon="@drawable/button_yuepai_a"
-                app:fab_title="想拍人" />
+                app:fab_title="摄影师招募场" />
 
             <com.ddz.floatingactionbutton.FloatingActionButton
                 android:id="@+id/action_middle"
@@ -151,7 +151,7 @@
                 app:fab_colorPressed="@color/gray_cc"
                 app:fab_icon="@drawable/button_yuepai_b"
                 app:fab_size="normal"
-                app:fab_title="想被拍" />
+                app:fab_title="模特招募场" />
 
             <com.ddz.floatingactionbutton.FloatingActionButton
                 android:id="@+id/action_down"

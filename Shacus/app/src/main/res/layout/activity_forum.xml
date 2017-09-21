@@ -16,37 +16,42 @@
 
         <ImageButton
             android:id="@+id/btn_favor"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="5dp"
             android:background="@drawable/btn_favor_selector"
-            android:scaleType="centerInside" />
+            android:scaleType="centerInside"
+            android:layout_marginLeft="5dp" />
 
         <ImageButton
             android:id="@+id/sendremark"
-            android:layout_width="40dp"
-            android:layout_height="20dp"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_weight="1"
             android:background="@color/transparent"
             android:scaleType="centerInside"
-            android:src="@drawable/btn_send" />
+            android:src="@drawable/btn_send"
+            android:layout_marginLeft="8dp" />
 
-        <EditText
+        <shacus.edu.seu.com.shacus.View.Custom.LineEditText
             android:id="@+id/et_add_remark"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="7dp"
             android:layout_toLeftOf="@id/sendremark"
             android:layout_toRightOf="@id/btn_favor"
-            android:background="@color/themecolor"
+            android:background="@color/white"
             android:hint="添加评论"
+            android:textColorHint="@color/lightgray"
             android:textCursorDrawable="@drawable/color_cursor"
-            android:textSize="12sp" />
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp" />
     </RelativeLayout>
 
     <TextView
@@ -104,7 +109,8 @@
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="5dp"
                                 android:contentDescription="aa"
-                                android:src="@drawable/p2" />
+                                android:src="@drawable/p2"
+                                android:layout_marginLeft="5dp" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -161,6 +167,10 @@
                             android:layout_height="wrap_content">
 
                         </android.support.v7.widget.RecyclerView>
+                        <TextView
+                            android:background="@color/whitesmoke"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -205,7 +215,8 @@
                             android:layout_centerVertical="true"
                             android:layout_marginRight="10dp"
                             android:background="@drawable/btn_praise_selector"
-                            android:visibility="visible" />
+                            android:visibility="visible"
+                            android:layout_alignParentRight="true" />
                     </RelativeLayout>
 
                 </android.support.v7.widget.Toolbar>

@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -133,6 +132,7 @@ public class ForumCommunityFragment extends BaseFragment implements AbsListView.
 //        pullRefreshLayout.setColorSchemeColors(int []);
 //        pullRefreshLayout.setColor(int);
 
+        refresh();
         return mRootView;
     }
 
@@ -155,6 +155,10 @@ public class ForumCommunityFragment extends BaseFragment implements AbsListView.
                 onLoad();
             }
         }
+    }
+
+    public void refresh(){
+        forumItemManager.doRefresh();
     }
 
     @Override

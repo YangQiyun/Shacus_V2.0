@@ -14,10 +14,8 @@ import io.rong.imkit.RongIM;
 import io.rong.imkit.fragment.ConversationFragment;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
-import shacus.edu.seu.com.shacus.Data.Cache.ACache;
-import shacus.edu.seu.com.shacus.Data.Model.UserModel;
-import shacus.edu.seu.com.shacus.MyApplication;
 import shacus.edu.seu.com.shacus.DemoContext;
+import shacus.edu.seu.com.shacus.MyApplication;
 import shacus.edu.seu.com.shacus.R;
 
 /**
@@ -142,10 +140,9 @@ public class ConversationActivity extends FragmentActivity {
      * 设置 actionbar title
      */
     private void setActionBarTitle(String targetid) {
-        ACache cache = ACache.get(this);
-        UserModel userModel = (UserModel) cache.getAsObject("rongusermodel"+targetid);
-        mTitle.setText(userModel.getNickName());
+        mTitle.setText("私信");
     }
+
 
     /**
      * 重连
